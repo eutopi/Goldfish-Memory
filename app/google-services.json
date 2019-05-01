@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1029492584109",
+    "firebase_url": "https://goldfishmemory-81dc4.firebaseio.com",
+    "project_id": "goldfishmemory-81dc4",
+    "storage_bucket": "goldfishmemory-81dc4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029492584109:android:74ba35d28bcf105a",
+        "android_client_info": {
+          "package_name": "us.ait.goldfishmemory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1029492584109-b7ns4cmpt32i0nchoggebolv7qi7j8r2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "us.ait.goldfishmemory",
+            "certificate_hash": "9bd4cbedfe30c914ed98e38ba5229f3fada1e9de"
+          }
+        },
+        {
+          "client_id": "1029492584109-ue5fqt8beec5pja0js6ddis3m6tt267j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1k6Sn_SHgGc6KS2YbnpV3zVAj5AwwrBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1029492584109-ue5fqt8beec5pja0js6ddis3m6tt267j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

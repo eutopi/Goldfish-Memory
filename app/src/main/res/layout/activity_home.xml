@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:wave="http://schemas.android.com/apk/res-auto"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent">
+
+    <com.john.waveview.WaveView
+            android:id="@+id/wave_view_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            wave:progress="25"
+            wave:wave_height="middle"
+            android:background="@color/white"
+            wave:blow_wave_color="@color/myrtleGreen"
+            wave:above_wave_color="@color/emerald"
+    />
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="200dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp">
+
+        <Button
+                android:text="Play"
+                android:onClick="playClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <Button
+                android:text="Profile"
+                android:onClick="profileClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <Button
+                android:text="Leaderboard"
+                android:onClick="leaderboardClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</FrameLayout>

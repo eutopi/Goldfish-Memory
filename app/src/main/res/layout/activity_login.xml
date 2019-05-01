@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:wave="http://schemas.android.com/apk/res-auto"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent">
+
+    <com.john.waveview.WaveView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            wave:progress="25"
+            wave:wave_height="middle"
+            android:background="@color/white"
+            wave:blow_wave_color="@color/myrtleGreen"
+            wave:above_wave_color="@color/emerald"
+    />
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="100dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp">
+
+        <ImageView android:src="@drawable/goldfish"
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:scaleType="fitXY"
+                   android:layout_gravity="center_horizontal" />
+
+        <TextView
+                android:text="goldfish memory"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp"/>
+
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/etEmail"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:inputType="textEmailAddress"
+                      android:text="tongyu@gmail.com"
+                      android:hint="Email" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                wave:passwordToggleEnabled="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/etPassword"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:inputType="textPassword"
+                      android:text="123456"
+                      android:hint="Password"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+                android:weightSum="2"
+                android:paddingTop="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.gc.materialdesign.views.ButtonFlat
+                    android:id="@+id/btnLogin"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:onClick="loginClick"
+                    android:text="Login"
+                    android:background="@color/myrtleGreen"/>
+
+            <com.gc.materialdesign.views.ButtonFlat
+                    android:id="@+id/btnRegister"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:onClick="registerClick"
+                    android:text="Register"
+                    android:background="@color/myrtleGreen"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
