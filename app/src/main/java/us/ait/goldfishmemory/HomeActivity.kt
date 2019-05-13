@@ -35,8 +35,17 @@ class HomeActivity : AppCompatActivity() {
         }, 100L)
     }
 
+    fun playClick(v: View) {
+        startActivity(Intent(this@HomeActivity, GameActivity::class.java))
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+    }
+
     fun profileClick(v: View) {
         startActivity(Intent(this@HomeActivity, ProfileActivity::class.java))
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+    }
+
+    fun leaderboardClick(v: View) {
+
     }
 }
