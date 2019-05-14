@@ -9,25 +9,22 @@
         android:gravity="center_horizontal"
         tools:context=".GameActivity">
 
-    <LinearLayout
+    <TextView
+            android:textSize="40sp"
+            android:id="@+id/timeStatus"
+            android:layout_gravity="left"
+            android:paddingLeft="70dp"
+            android:paddingTop="50dp"
+            android:paddingBottom="20dp"
+            android:text="0"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="100dp"
-            android:layout_marginBottom="25dp">
-        <Button
-                android:text="add timer here later"
-                android:padding="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"/>
 
-    </LinearLayout>
 
     <us.ait.goldfishmemory.view.GameView
             android:id="@+id/gameView"
             android:layout_width="300dp"
-            android:layout_height="300dp"/>
+            android:layout_height="350dp"/>
 
 
     <LinearLayout
@@ -39,12 +36,18 @@
             android:layout_marginBottom="25dp">
 
         <Button
-                android:text="hi"
+                android:id="@+id/btnReset"
+                android:text="Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Button
+                android:id="@+id/btnTest2"
+                android:text="hi2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
     </LinearLayout>
-
 
 
 </LinearLayout>
