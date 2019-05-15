@@ -50,6 +50,7 @@
                     android:layout_height="wrap_content">
 
                 <TextView
+                        android:id="@+id/tvShortestTime"
                         android:text="56"
                         android:textColor="@color/lightRed"
                         android:textSize="30sp"
@@ -77,6 +78,7 @@
                     android:layout_height="wrap_content">
 
                 <TextView
+                        android:id="@+id/tvGamesPlayed"
                         android:text="40"
                         android:textColor="@color/lightRed"
                         android:textSize="30sp"

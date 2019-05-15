@@ -31,8 +31,7 @@ class LoginActivity : AppCompatActivity() {
                     .setDisplayName(userNameFromEmail(user.email!!))
                     .build()
             )
-            addPlayer(user.uid, userNameFromEmail(user.email!!))
-            Toast.makeText(this@LoginActivity, "Register ok.",
+            Toast.makeText(this@LoginActivity, "Register ok",
                 Toast.LENGTH_LONG).show()
         }.addOnFailureListener {
             Toast.makeText(this@LoginActivity, "Register failed. ${it.message}",
@@ -40,16 +39,6 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun addPlayer(id: String, username: String) {
-        val player = Player(id, username, "100", "0", "")
-
-        val playersCollection = FirebaseFirestore.getInstance().collection("players")
-        playersCollection.add(player).addOnSuccessListener {
-            Toast.makeText(this@LoginActivity, "Player created", Toast.LENGTH_LONG).show()
-        }.addOnFailureListener {
-            Toast.makeText(this@LoginActivity, "Error: ${it.message}", Toast.LENGTH_LONG).show()
-        }
-    }
 
     fun loginClick(v: View){
         if (!isFormValid()){
