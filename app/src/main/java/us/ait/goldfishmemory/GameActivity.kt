@@ -7,6 +7,11 @@ import android.support.v4.view.ViewCompat
 import kotlinx.android.synthetic.main.activity_game.*
 import android.support.v4.os.HandlerCompat.postDelayed
 import android.support.v4.os.HandlerCompat.postDelayed
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import us.ait.goldfishmemory.data.Player
+import us.ait.goldfishmemory.model.GameModel
+import us.ait.goldfishmemory.view.GameView
 import java.util.*
 
 class GameActivity : AppCompatActivity() {
@@ -17,8 +22,18 @@ class GameActivity : AppCompatActivity() {
     inner class MyTimerTask : TimerTask() {
         override fun run() {
             runOnUiThread {
-                time += 1
-                timeStatus.text = (time / 1000.toDouble()).toString()
+                if (GameModel.won) {
+                    if (true) {
+                        updateBestTime()
+                        tvBestTime.text = "Best time: " + timeStatus.text
+                    }
+                    timerExist = false
+                    mainTimer.cancel()
+                }
+                else {
+                    time += 1
+                    timeStatus.text = (time / 1000.toDouble()).toString()
+                }
             }
         }
     }
@@ -32,12 +47,12 @@ class GameActivity : AppCompatActivity() {
         timeStatus.text = (time / 1000.toDouble()).toString()
 
         startTimer()
-        btnReset.setOnClickListener {
+        btnReplay.setOnClickListener {
             gameView.resetGame()
             time = 0
             startTimer()
         }
-        btnTest2.setOnClickListener {
+        btnExit.setOnClickListener {
             timerExist = false
             mainTimer.cancel()
         }
@@ -51,6 +66,9 @@ class GameActivity : AppCompatActivity() {
         }
     }
 
+    private fun updateBestTime() {
+
+    }
 
     override fun onStop() {
         super.onStop()

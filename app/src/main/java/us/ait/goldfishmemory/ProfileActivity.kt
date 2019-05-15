@@ -12,5 +12,6 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 
         txtUsername.text = FirebaseAuth.getInstance().currentUser!!.displayName
+
     }
 }

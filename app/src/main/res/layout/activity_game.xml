@@ -10,11 +10,19 @@
         tools:context=".GameActivity">
 
     <TextView
+            android:id="@+id/tvBestTime"
+            android:text="Best time: "
+            android:paddingTop="50dp"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
             android:textSize="40sp"
             android:id="@+id/timeStatus"
             android:layout_gravity="left"
-            android:paddingLeft="70dp"
-            android:paddingTop="50dp"
+            android:paddingLeft="150dp"
             android:paddingBottom="20dp"
             android:text="0"
             android:layout_width="wrap_content"
@@ -36,14 +44,14 @@
             android:layout_marginBottom="25dp">
 
         <Button
-                android:id="@+id/btnReset"
-                android:text="Reset"
+                android:id="@+id/btnReplay"
+                android:text="Replay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
         <Button
-                android:id="@+id/btnTest2"
-                android:text="hi2"
+                android:id="@+id/btnExit"
+                android:text="Exit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 

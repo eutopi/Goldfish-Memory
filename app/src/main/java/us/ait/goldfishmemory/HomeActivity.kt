@@ -9,6 +9,7 @@ import android.os.Handler
 import kotlinx.android.synthetic.main.activity_home.*
 import android.support.v4.os.HandlerCompat.postDelayed
 import android.view.View
+import com.google.firebase.auth.FirebaseAuth
 
 
 class HomeActivity : AppCompatActivity() {
@@ -46,6 +47,12 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun leaderboardClick(v: View) {
+        startActivity(Intent(this@HomeActivity, LeaderboardActivity::class.java))
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+    }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        FirebaseAuth.getInstance().signOut()
     }
 }
