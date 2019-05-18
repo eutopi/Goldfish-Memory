@@ -34,7 +34,7 @@ class LeaderboardActivity : AppCompatActivity() {
 
     private fun initPosts() {
         val db = FirebaseFirestore.getInstance()
-        val query = db.collection("players")
+        val query = db.collection("players").orderBy("bestTime", Query.Direction.DESCENDING)
         var allPlayersListener = query.addSnapshotListener(
             object : EventListener<QuerySnapshot> {
                 override fun onEvent(querySnapshot: QuerySnapshot?, e: FirebaseFirestoreException?) {
@@ -49,14 +49,15 @@ class LeaderboardActivity : AppCompatActivity() {
                                 val player = dc.document.toObject(Player::class.java)
                                 playersAdapter.addPlayer(player, dc.document.id)
                             }
-                            DocumentChange.Type.MODIFIED -> {
-                                Toast.makeText(this@LeaderboardActivity, "update: ${dc.document.id}", Toast.LENGTH_LONG)
-                                    .show()
-                            }
                         }
                     }
                 }
             }
         )
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
 }

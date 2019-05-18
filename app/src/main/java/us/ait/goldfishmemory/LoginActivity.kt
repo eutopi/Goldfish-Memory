@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_login.*
@@ -31,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
                     .setDisplayName(userNameFromEmail(user.email!!))
                     .build()
             )
+            addPlayerRecord(user)
             Toast.makeText(this@LoginActivity, "Register ok",
                 Toast.LENGTH_LONG).show()
         }.addOnFailureListener {
@@ -38,7 +40,6 @@ class LoginActivity : AppCompatActivity() {
                 Toast.LENGTH_LONG).show()
         }
     }
-
 
     fun loginClick(v: View){
         if (!isFormValid()){
@@ -57,6 +58,21 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this@LoginActivity,
                 "Login failed ${it.message}", Toast.LENGTH_LONG).show()
         }
+    }
+
+
+    private fun addPlayerRecord(user: FirebaseUser) {
+        val player = Player(user.uid, userNameFromEmail(user.email!!),
+            100f, 0,
+            "https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar1.png?alt=media&token=bffebbdc-3080-410b-8532-315e70b7192a")
+
+        val playersCollection = FirebaseFirestore.getInstance().collection("players")
+        playersCollection.add(player).addOnSuccessListener {
+            Toast.makeText(this@LoginActivity, "Player created", Toast.LENGTH_LONG).show()
+        }.addOnFailureListener {
+            Toast.makeText(this@LoginActivity, "Error: ${it.message}", Toast.LENGTH_LONG).show()
+        }
+
     }
 
     private fun isFormValid(): Boolean {

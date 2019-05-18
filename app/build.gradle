@@ -40,6 +40,9 @@ dependencies {
     implementation 'com.github.john990:WaveView:v0.9'
     implementation 'com.github.navasmdc:MaterialDesign:1.5@aar'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

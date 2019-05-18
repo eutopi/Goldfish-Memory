@@ -22,6 +22,7 @@
             android:textSize="40sp"
             android:id="@+id/timeStatus"
             android:layout_gravity="left"
+            android:textColor="@color/lightRed"
             android:paddingLeft="150dp"
             android:paddingBottom="20dp"
             android:text="0"
@@ -46,12 +47,6 @@
         <Button
                 android:id="@+id/btnReplay"
                 android:text="Replay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        <Button
-                android:id="@+id/btnExit"
-                android:text="Exit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 

@@ -76,7 +76,7 @@ class GameView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
         if (event?.action == MotionEvent.ACTION_DOWN && !GameModel.waiting) {
             val tX = event.x.toInt() / (width / DIM)
             val tY = event.y.toInt() / (height / DIM)
-            if (tX < DIM && tY < DIM && !gameWon) {
+            if (tX < DIM && tY < DIM && !GameModel.cardIsGone(tX, tY) && !gameWon) {
                 GameModel.click(tX, tY)
                 invalidate()
             }

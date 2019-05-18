@@ -70,6 +70,10 @@ object GameModel {
         }
     }
 
+    public fun cardIsGone(x: Int, y: Int): Boolean {
+        return model[x][y].gone
+    }
+
     public fun checkWin() {
         for (i in 0 until DIM) {
             for (j in 0 until DIM) {
