@@ -28,7 +28,7 @@
 
         <TextView
                 android:id="@+id/tvPlayer"
-                android:text="username"
+                android:text="@string/tvPlayer_txt"
                 android:textSize="18sp"
                 android:layout_weight="3"
                 android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
 
         <TextView
                 android:id="@+id/tvTime"
-                android:text="time"
+                android:text="@string/tvTime_txt"
                 android:textColor="@color/lightRed"
                 android:textSize="20sp"
                 android:layout_weight="1"

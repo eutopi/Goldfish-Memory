@@ -29,7 +29,7 @@ class GameActivity : AppCompatActivity() {
                 if (GameModel.won) {
                     if (timeStatus.text.toString().toFloat() < player.bestTime) {
                         player.bestTime = timeStatus.text.toString().toFloat()
-                        tvBestTime.text = "Best time: " + timeStatus.text
+                        tvBestTime.text = getString(R.string.best_time_prefix) + timeStatus.text
                     }
                     if (!gameCounted) {
                         player.gamesPlayed = player.gamesPlayed + 1
@@ -98,11 +98,11 @@ class GameActivity : AppCompatActivity() {
                 for (document in documents) {
                     docID = document.id
                     player = document.toObject(Player::class.java)
-                    tvBestTime.text = "Best time: " + player.bestTime
+                    tvBestTime.text = getString(R.string.best_time_prefix) + player.bestTime
                 }
             }
             .addOnFailureListener { exception ->
-                Toast.makeText(this@GameActivity, "Error retrieving player", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@GameActivity, getString(R.string.get_player_error_msg), Toast.LENGTH_LONG).show()
             }
     }
 

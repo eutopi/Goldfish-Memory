@@ -38,7 +38,7 @@ class IconDialog : DialogFragment() {
         if (context is ProfileHandler) {
             profileHandler = context
         } else {
-            throw RuntimeException("The activity does not implement the ProfileHandler")
+            throw RuntimeException(getString(R.string.profile_handler_error_msg))
         }
     }
 
@@ -47,7 +47,7 @@ class IconDialog : DialogFragment() {
 
         getPlayer()
 
-        builder.setTitle("Select an icon")
+        builder.setTitle(getString(R.string.profile_dialog_title))
 
         val rootView = requireActivity().layoutInflater.inflate(
             R.layout.new_icon_dialog, null
@@ -79,27 +79,27 @@ class IconDialog : DialogFragment() {
         super.onResume()
 
         avatar1.setOnClickListener {
-            player.icon = "https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar1.png?alt=media&token=bffebbdc-3080-410b-8532-315e70b7192a"
+            player.icon = getString(R.string.icon_url_1)
             handleIconChange(player.icon)
         }
         avatar2.setOnClickListener {
-            player.icon = "https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar2.png?alt=media&token=def033df-56dc-4dd4-94bb-edd6a634da4e"
+            player.icon = getString(R.string.icon_url_2)
             handleIconChange(player.icon)
         }
         avatar3.setOnClickListener {
-            player.icon = "https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar3.png?alt=media&token=652dfb54-035b-41a9-af4d-4c48ab40b7e7"
+            player.icon = getString(R.string.icon_url_3)
             handleIconChange(player.icon)
         }
         avatar4.setOnClickListener {
-            player.icon = "https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar4.png?alt=media&token=4a6cf77f-b2c3-4f7a-aa49-54dc74d42a8f"
+            player.icon = getString(R.string.icon_url_4)
             handleIconChange(player.icon)
         }
         avatar5.setOnClickListener {
-            player.icon = "https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar5.png?alt=media&token=dd73713a-3931-499c-a383-a92447a03593"
+            player.icon = getString(R.string.icon_url_5)
             handleIconChange(player.icon)
         }
         avatar6.setOnClickListener {
-            player.icon ="https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar6.png?alt=media&token=8435c49f-cd99-45bd-8528-8aeea60faec6"
+            player.icon =getString(R.string.icon_url_6)
             handleIconChange(player.icon)
         }
     }

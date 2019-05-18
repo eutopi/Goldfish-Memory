@@ -26,21 +26,21 @@
         <com.gc.materialdesign.views.ButtonFlat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Play"
+                android:text="@string/btnPlay_txt"
                 android:onClick="playClick"
                 android:background="@color/lightRed"/>
 
         <com.gc.materialdesign.views.ButtonFlat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Profile"
+            android:text="@string/btnProfile_txt"
             android:onClick="profileClick"
             android:background="@color/lightRed"/>
 
         <com.gc.materialdesign.views.ButtonFlat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Leaderboard"
+                android:text="@string/btnLeaderboard_txt"
                 android:onClick="leaderboardClick"
                 android:background="@color/lightRed"/>
 

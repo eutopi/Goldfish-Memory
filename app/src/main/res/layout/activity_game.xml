@@ -24,7 +24,7 @@
 
         <TextView
                 android:id="@+id/tvBestTime"
-                android:text="Best time: "
+                android:text="@string/tvBestTime_txt"
                 android:paddingTop="30dp"
                 android:textSize="16sp"
                 android:layout_gravity="center"
@@ -37,7 +37,7 @@
                 android:layout_gravity="left"
                 android:textColor="@color/lightRed"
                 android:paddingLeft="150dp"
-                android:text="0"
+                android:text="@string/timeStatus_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -64,7 +64,7 @@
 
             <Button
                     android:id="@+id/btnReplay"
-                    android:text="Replay"
+                    android:text="@string/btnReplay_txt"
                     android:textColor="@color/white"
                     android:background="@color/lightRed"
                     android:layout_width="wrap_content"

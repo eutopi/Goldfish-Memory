@@ -30,7 +30,7 @@
 
         <TextView
                 android:id="@+id/txtUsername"
-                android:text="Username"
+                android:text="@string/txtUsername_txt"
                 android:paddingTop="20dp"
                 android:paddingBottom="60dp"
                 android:textSize="28sp"
@@ -54,14 +54,14 @@
 
                 <TextView
                         android:id="@+id/tvShortestTime"
-                        android:text="56"
+                        android:text="@string/tvShortTime_num"
                         android:textColor="@color/lightRed"
                         android:textSize="40sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
                 <TextView
-                        android:text="Shortest time"
+                        android:text="@string/tvShortestTime_txt"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:layout_width="wrap_content"
@@ -83,14 +83,14 @@
 
                 <TextView
                         android:id="@+id/tvGamesPlayed"
-                        android:text="40"
+                        android:text="@string/tvGamesPlayed_num"
                         android:textColor="@color/lightRed"
                         android:textSize="40sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
                 <TextView
-                        android:text="Games played"
+                        android:text="@string/tvGamedPlayed_txt"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:layout_width="wrap_content"

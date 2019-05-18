@@ -29,7 +29,7 @@
                    android:layout_gravity="center_horizontal" />
 
         <TextView
-                android:text="goldfish memory"
+                android:text="@string/title_txt"
                 android:textColor="@color/lightRed"
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
@@ -46,8 +46,8 @@
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:inputType="textEmailAddress"
-                      android:text="user1@gmail.com"
-                      android:hint="Email" />
+                      android:text="@string/etEmail_txt"
+                      android:hint="@string/etEmail_hint" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -60,8 +60,8 @@
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:inputType="textPassword"
-                      android:text="123456"
-                      android:hint="Password"/>
+                      android:text="@string/etPassword_txt"
+                      android:hint="@string/etPassword_hint"/>
         </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
@@ -77,7 +77,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:onClick="loginClick"
-                    android:text="Login"
+                    android:text="@string/btnLogin_txt"
                     android:background="@color/myrtleGreen"/>
 
             <com.gc.materialdesign.views.ButtonFlat
@@ -86,7 +86,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:onClick="registerClick"
-                    android:text="Register"
+                    android:text="@string/btnRegister_txt"
                     android:background="@color/myrtleGreen"/>
 
         </LinearLayout>

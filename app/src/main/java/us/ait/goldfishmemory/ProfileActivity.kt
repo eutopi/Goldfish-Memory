@@ -20,7 +20,7 @@ class ProfileActivity : AppCompatActivity(), IconDialog.ProfileHandler {
         setPlayerStats()
 
         ivAvatar.setOnClickListener {
-            IconDialog().show(supportFragmentManager, "TAG_ICON_DIALOG")
+            IconDialog().show(supportFragmentManager, getString(R.string.icon_dialog_tag))
         }
     }
 
@@ -39,7 +39,7 @@ class ProfileActivity : AppCompatActivity(), IconDialog.ProfileHandler {
                 }
             }
             .addOnFailureListener { exception ->
-                Toast.makeText(this@ProfileActivity, "Error retrieving player", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@ProfileActivity, getString(R.string.get_player_error_msg), Toast.LENGTH_LONG).show()
             }
     }
 

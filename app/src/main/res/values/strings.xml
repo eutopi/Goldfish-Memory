@@ -91,4 +91,50 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="oceanColor">#c0dddd</string>
+    <string name="game_finish_msg">You finished!</string>
+    <string name="get_player_error_msg">Error retrieving player</string>
+    <string name="best_time_prefix">Best time:</string>
+    <string name="profile_handler_error_msg">The activity does not implement the ProfileHandler</string>
+    <string name="profile_dialog_title">Select an icon</string>
+    <string name="icon_url_1">
+        <![CDATA[https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar1.png?alt=media&token=bffebbdc-3080-410b-8532-315e70b7192a]]></string>
+    <string name="icon_url_2">
+        <![CDATA[https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar2.png?alt=media&token=def033df-56dc-4dd4-94bb-edd6a634da4e]]></string>
+    <string name="icon_url_3">
+        <![CDATA[https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar3.png?alt=media&token=652dfb54-035b-41a9-af4d-4c48ab40b7e7]]></string>
+    <string name="icon_url_4">
+        <![CDATA[https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar4.png?alt=media&token=4a6cf77f-b2c3-4f7a-aa49-54dc74d42a8f]]></string>
+    <string name="icon_url_5">
+        <![CDATA[https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar5.png?alt=media&token=dd73713a-3931-499c-a383-a92447a03593]]></string>
+    <string name="icon_url_6">
+        <![CDATA[https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar6.png?alt=media&token=8435c49f-cd99-45bd-8528-8aeea60faec6]]></string>
+    <string name="register_ok_msg">Register ok</string>
+    <string name="register_fail_msg">Register failed.</string>
+    <string name="login_ok_msg">Login ok</string>
+    <string name="login_fail_msg">Login failed</string>
+    <string name="empty_field_msg">This field can not be empty</string>
+    <string name="player_created_msg">Player created</string>
+    <string name="error_header">Error:</string>
+    <string name="icon_dialog_tag">TAG_ICON_DIALOG</string>
+    <string name="btnReplay_txt">Replay</string>
+    <string name="timeStatus_txt">0</string>
+    <string name="tvBestTime_txt">Best time:</string>
+    <string name="btnPlay_txt">Play</string>
+    <string name="btnProfile_txt">Profile</string>
+    <string name="btnLeaderboard_txt">Leaderboard</string>
+    <string name="btnLogin_txt">Login</string>
+    <string name="btnRegister_txt">Register</string>
+    <string name="etPassword_txt">123456</string>
+    <string name="etPassword_hint">Password</string>
+    <string name="etEmail_txt">user1@gmail.com</string>
+    <string name="etEmail_hint">Email</string>
+    <string name="title_txt">goldfish memory</string>
+    <string name="txtUsername_txt">Username</string>
+    <string name="tvShortTime_num">56</string>
+    <string name="tvShortestTime_txt">Shortest time</string>
+    <string name="tvGamesPlayed_num">40</string>
+    <string name="tvGamedPlayed_txt">Games played</string>
+    <string name="tvPlayer_txt">username</string>
+    <string name="tvTime_txt">time</string>
 </resources>

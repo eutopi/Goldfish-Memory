@@ -34,10 +34,10 @@ class GameView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
     init {
         paintBackground.color = Color.WHITE
         paintBackground.style = Paint.Style.FILL
-        oceanBackground.color = Color.parseColor("#c0dddd")
+        oceanBackground.color = Color.parseColor(context!!.getString(R.string.oceanColor))
         oceanBackground.style = Paint.Style.FILL
 
-        oceanLine.color = Color.parseColor("#c0dddd")
+        oceanLine.color = Color.parseColor(context!!.getString(R.string.oceanColor))
         oceanLine.style = Paint.Style.STROKE
         oceanLine.strokeWidth = 20f
 
@@ -106,7 +106,7 @@ class GameView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
 
     public fun checkGameStatus() {
         if (GameModel.won && !winMsg) {
-            val msg = "You finished!"
+            val msg = context.getString(R.string.game_finish_msg)
             Snackbar.make(this, msg, Snackbar.LENGTH_LONG).show()
             gameWon = true
             winMsg = true

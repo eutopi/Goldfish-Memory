@@ -33,10 +33,10 @@ class LoginActivity : AppCompatActivity() {
                     .build()
             )
             addPlayerRecord(user)
-            Toast.makeText(this@LoginActivity, "Register ok",
+            Toast.makeText(this@LoginActivity, getString(R.string.register_ok_msg),
                 Toast.LENGTH_LONG).show()
         }.addOnFailureListener {
-            Toast.makeText(this@LoginActivity, "Register failed. ${it.message}",
+            Toast.makeText(this@LoginActivity, getString(R.string.register_fail_msg) + it.message,
                 Toast.LENGTH_LONG).show()
         }
     }
@@ -52,25 +52,24 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             Toast.makeText(this@LoginActivity,
-                "Login ok", Toast.LENGTH_LONG).show()
+                getString(R.string.login_ok_msg), Toast.LENGTH_LONG).show()
             //finish()
         }.addOnFailureListener{
             Toast.makeText(this@LoginActivity,
-                "Login failed ${it.message}", Toast.LENGTH_LONG).show()
+                getString(R.string.login_fail_msg) + it.message, Toast.LENGTH_LONG).show()
         }
     }
 
 
     private fun addPlayerRecord(user: FirebaseUser) {
         val player = Player(user.uid, userNameFromEmail(user.email!!),
-            100f, 0,
-            "https://firebasestorage.googleapis.com/v0/b/goldfishmemory-81dc4.appspot.com/o/avatar1.png?alt=media&token=bffebbdc-3080-410b-8532-315e70b7192a")
+            100f, 0, getString(R.string.icon_url_1))
 
         val playersCollection = FirebaseFirestore.getInstance().collection("players")
         playersCollection.add(player).addOnSuccessListener {
-            Toast.makeText(this@LoginActivity, "Player created", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@LoginActivity, getString(R.string.player_created_msg), Toast.LENGTH_LONG).show()
         }.addOnFailureListener {
-            Toast.makeText(this@LoginActivity, "Error: ${it.message}", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@LoginActivity, getString(R.string.error_header) + it.message, Toast.LENGTH_LONG).show()
         }
 
     }
@@ -78,11 +77,11 @@ class LoginActivity : AppCompatActivity() {
     private fun isFormValid(): Boolean {
         return when {
             etEmail.text.isEmpty() -> {
-                etEmail.error = "This field can not be empty"
+                etEmail.error = getString(R.string.empty_field_msg)
                 false
             }
             etPassword.text.isEmpty() -> {
-                etPassword.error = "This field can not be empty"
+                etPassword.error = getString(R.string.empty_field_msg)
                 false
             }
             else -> true
