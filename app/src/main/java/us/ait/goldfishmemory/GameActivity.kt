@@ -7,6 +7,8 @@ import android.support.v4.view.ViewCompat
 import kotlinx.android.synthetic.main.activity_game.*
 import android.support.v4.os.HandlerCompat.postDelayed
 import android.support.v4.os.HandlerCompat.postDelayed
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -53,6 +55,7 @@ class GameActivity : AppCompatActivity() {
         setContentView(R.layout.activity_game)
 
         getPlayer()
+        animate()
 
         timeStatus.text = (time / 1000.toDouble()).toString()
         startTimer()
@@ -63,6 +66,20 @@ class GameActivity : AppCompatActivity() {
             gameCounted = false
             startTimer()
         }
+    }
+
+    private fun animate() {
+        val anim = AnimationUtils.loadAnimation(
+            this@GameActivity, R.anim.fisherman_anim
+        )
+        anim.setAnimationListener(object : Animation.AnimationListener {
+            override fun onAnimationRepeat(animation: Animation?) {}
+            override fun onAnimationEnd(animation: Animation?) {
+                ivFisherman.startAnimation(anim)
+            }
+            override fun onAnimationStart(animation: Animation?) {}
+        })
+        ivFisherman.startAnimation(anim)
     }
 
     private fun startTimer() {
